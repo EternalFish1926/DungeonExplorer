@@ -10,10 +10,8 @@ namespace DungeonExplorer
 
         public Game()
         {
-            // Initialize the player
             player = new Player("Hero", 100);
 
-            // Create a simple room with an item
             currentRoom = new Room("A dark and eerie dungeon room. A single torch flickers on the wall.", "Rusty Key");
         }
 
@@ -41,7 +39,7 @@ namespace DungeonExplorer
 
                     case "move":
                         Console.WriteLine("You move deeper into the dungeon...");
-                        // Future expansion: Add multiple rooms
+
                         break;
 
                     case "take":
