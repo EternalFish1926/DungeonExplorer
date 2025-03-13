@@ -25,13 +25,13 @@ namespace DungeonExplorer
 
             while (playing)
             {
-                //Asks the player for input
+                //Asks the player for input (Input hsa to be text based)
                 Console.WriteLine("\nWhat do you want to do? (look/move/take/inventory/quit)");
                 string input = Console.ReadLine().ToLower();
 
                 switch (input)
                 {
-                    //Gets description of room and items inside the room 
+                    //Gets description of room and items inside the room (e.g. key)
                     case "look":
                         Console.WriteLine($"You look around: {currentRoom.GetDescription()}");
                         if (currentRoom.Item != null)
@@ -44,7 +44,7 @@ namespace DungeonExplorer
                         Console.WriteLine("You move deeper into the dungeon...");
 
                         break;
-                        //Picks up item(s) in the room if any are seen  
+                        //Picks up item(s) in the room if any are seen (Use look command to view items outside room description)  
                     case "take":
                         if (currentRoom.Item != null)
                         {
@@ -57,7 +57,7 @@ namespace DungeonExplorer
                             Console.WriteLine("There's nothing to take.");
                         }
                         break;
-                        //Displays the players inventory
+                        //Displays the players inventory (If the player picks up any items they will be shown in inventory)
                     case "inventory":
                         Console.WriteLine("Your inventory: " + player.InventoryContents());
                         break;
@@ -66,7 +66,7 @@ namespace DungeonExplorer
                         playing = false;
                         Console.WriteLine("Thanks for playing!");
                         break;
-                        //Any other commands show as invalid
+                        //Any other commands show as invalid (Only listen commands are valid and work)
                     default:
                         Console.WriteLine("Invalid command. Try again.");
                         break;
