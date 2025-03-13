@@ -17,13 +17,13 @@ namespace DungeonExplorer
 
         public void PickUpItem(string item)
         {
-            //adds item to inventory
+            //Adds item(s) to inventory
             inventory.Add(item);
         }
     
         public string InventoryContents()
         {
-            // inventory contents displays empty if the player has not picked up anything
+            // Inventory contents displays empty if the player has not picked up anything
             return inventory.Count > 0 ? string.Join(", ", inventory) : "empty";
         }
 
